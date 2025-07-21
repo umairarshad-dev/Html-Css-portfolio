@@ -563,3 +563,260 @@ display: flex;
   justify-content: center;
   align-items: center;
 }
+
+/* Responsive Design Additions */
+
+@media (max-width: 1200px) {
+  .hero-section-container,
+  .main-container,
+  .skills-container,
+  .experience-container,
+  .work-container,
+  .testimonials-container {
+    padding: 40px 20px;
+  }
+  .card-img {
+    height: 300px;
+  }
+}
+
+@media (max-width: 900px) {
+  .menu-bar {
+    flex-direction: column;
+    padding: 10px 10px;
+    align-items: flex-start;
+  }
+  .menu-list-container {
+    flex-direction: column;
+    width: 100%;
+  }
+  .menu-list {
+    border-right: none;
+    padding-right: 0;
+    flex-direction: column;
+    width: 100%;
+    align-items: flex-start;
+  }
+  .menu-button-list {
+    padding-left: 0;
+    flex-direction: row;
+    width: 100%;
+    justify-content: flex-start;
+  }
+  .hero-section-container {
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 10px;
+  }
+  .profile-img {
+    width: 60%;
+    height: auto;
+    margin: 0 auto;
+    justify-content: center;
+  }
+  .about-me-inner-container {
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 0;
+  }
+  .about-me-container,
+  .about-content-container {
+    width: 100%;
+    margin: 0;
+  }
+  .about-me-img {
+    width: 80vw;
+    height: auto;
+    margin-left: 0;
+    box-shadow: -10px 10px 0px 0px #374151;
+  }
+  .icons-container {
+    flex-wrap: wrap;
+    padding: 20px 0;
+  }
+  .js-icon {
+    width: 25%;
+    margin-bottom: 20px;
+  }
+  .exp-card {
+    flex-direction: column;
+    padding: 20px 10px;
+  }
+  .exp-img-container,
+  .exp-card-container {
+    width: 100%;
+  }
+  .work-card {
+    flex-direction: column;
+  }
+  .card-container-img,
+  .card-container-content {
+    width: 100%;
+    padding: 20px 10px;
+  }
+  .card-img {
+    height: 200px;
+  }
+  .second-last-section {
+    flex-direction: column;
+    padding-left: 0;
+    align-items: center;
+  }
+  .tes-card-container {
+    width: 80vw;
+    margin: 20px 0;
+    padding: 40px 10px;
+  }
+}
+
+@media (max-width: 600px) {
+  .hero-section-heading {
+    font-size: 32px;
+    line-height: 40px;
+  }
+  .hero-section-summary,
+  .about-me-summary,
+  .content-summary,
+  .experience-heading,
+  .work-heading,
+  .testimonials-heading,
+  .last-section-heading {
+    font-size: 14px;
+    line-height: 20px;
+    padding: 5px 0;
+  }
+  .main-container,
+  .skills-container,
+  .experience-container,
+  .work-container,
+  .testimonials-container {
+    padding: 20px 5px;
+  }
+  .about-me-img {
+    width: 95vw;
+    height: auto;
+    margin-left: 0;
+    box-shadow: -6px 6px 0px 0px #374151;
+  }
+  .js-icon {
+    width: 45%;
+    margin-bottom: 10px;
+  }
+  .exp-card {
+    padding: 10px 2px;
+  }
+  .tes-card-container {
+    width: 95vw;
+    padding: 20px 5px;
+  }
+  .gt-footer {
+    font-size: 12px;
+    padding: 10px 2px;
+    height: auto;
+  }
+}
+
+/* Hamburger styles */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  z-index: 1001;
+}
+.hamburger span {
+  display: block;
+  height: 4px;
+  width: 100%;
+  background: #d1d5db;
+  margin: 5px 0;
+  border-radius: 2px;
+  transition: 0.3s;
+}
+.hamburger.open span:nth-child(1) {
+  transform: translateY(9px) rotate(45deg);
+}
+.hamburger.open span:nth-child(2) {
+  opacity: 0;
+}
+.hamburger.open span:nth-child(3) {
+  transform: translateY(-9px) rotate(-45deg);
+}
+
+/* Hide menu on mobile by default */
+@media (max-width: 900px) {
+  .hamburger {
+    display: flex;
+    margin-left: auto;
+  }
+  .menu-list-container {
+    display: none;
+    width: 100%;
+    background: #030712;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+    border-radius: 0 0 12px 12px;
+  }
+  .menu-list-container.open {
+    display: flex;
+    flex-direction: column;
+    animation: fadeIn 0.2s;
+  }
+  .menu-list, .menu-button-list {
+    flex-direction: column;
+    width: 100%;
+    align-items: flex-start;
+    padding: 0;
+  }
+  .menu-list li, .menu-button-list li {
+    width: 100%;
+    padding: 12px 24px;
+  }
+  .menu-list li a, .download-cv-button {
+    width: 100%;
+    display: block;
+  }
+  .nav-gap {
+    height: 20px;
+  }
+}
+
+/* Add gap below nav for all screens */
+.nav-gap {
+  height: 32px;
+}
+
+/* Improve skills and experience spacing on mobile */
+@media (max-width: 900px) {
+  .icons-container {
+    gap: 16px;
+    margin-bottom: 24px;
+  }
+  .js-icon {
+    margin-bottom: 16px;
+  }
+  .exp-card {
+    margin-bottom: 24px;
+  }
+}
+@media (max-width: 600px) {
+  .icons-container {
+    gap: 8px;
+    margin-bottom: 16px;
+  }
+  .exp-card {
+    margin-bottom: 16px;
+  }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-10px); }
+  to { opacity: 1; transform: translateY(0); }
+}

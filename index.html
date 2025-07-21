@@ -19,7 +19,12 @@
   <body>
     <nav class="menu-bar">
       <div>&lt;SS/&gt;</div>
-      <div class="menu-list-container">
+      <button class="hamburger" id="hamburger-menu" aria-label="Open menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <div class="menu-list-container" id="nav-menu">
         <ul class="menu-list">
           <li><a href="">About</a></li>
           <li><a href="">Work</a></li>
@@ -34,6 +39,7 @@
         </ul>
       </div>
     </nav>
+    <div class="nav-gap"></div>
 
     <div class="hero-section-container">
       <div class="">
@@ -401,4 +407,12 @@
       <div class="gt-footer">2024 | Designed and coded with ❤️️ by M.Umair Arshad</div>
     </div>
   </body>
+  <script>
+    const hamburger = document.getElementById('hamburger-menu');
+    const navMenu = document.getElementById('nav-menu');
+    hamburger.addEventListener('click', function() {
+      navMenu.classList.toggle('open');
+      hamburger.classList.toggle('open');
+    });
+  </script>
 </html>
